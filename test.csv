@@ -1,4 +1,4 @@
-track_id,name,album_id,media_type_id,genre_id,composer,milliseconds,bytes,unit_price
+TrackId,Name,AlbumId,MediaTypeId,GenreId,Composer,Milliseconds,Bytes,UnitPrice
 422,I Want It All,36,1,1,Queen,241684,7876564,0.99
 424,Innuendo,36,1,1,Queen,387761,12664591,0.99
 426,Breakthru,36,1,1,Queen,249234,8150479,0.99

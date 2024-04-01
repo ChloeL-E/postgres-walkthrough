@@ -171,6 +171,12 @@ pappy = Family(
     relation_to_me="Father"
 )
 
+mark = Family(
+    first_name="Mark",
+    last_name="McGookin",
+    gender="Male",
+    relation_to_me="Brother-in-law"
+)
 
 # session.add(jonathan)
 # session.add(emilia)
@@ -179,6 +185,7 @@ pappy = Family(
 # session.add(ethan)
 # session.add(mamma)
 # session.add(pappy)
+session.add(mark)
 
 # updating a single record in Family
 # world = session.query(Family).filter_by(id=1).first()
@@ -191,7 +198,7 @@ pappy = Family(
 # programmer.famous_for = "World President"
 
 # commit our session to the database
-session.commit()
+# session.commit()
 
 
 # updating multiple records
@@ -242,3 +249,14 @@ session.commit()
 #         programmer.famous_for,
 #         sep=" | "
 #     )
+
+people = session.query(Family)
+for person in people:
+    print(
+        person.id,
+        person.first_name + " " + person.last_name,
+        person.gender,
+        person.age,
+        person.relation_to_me,
+        sep=" | "
+    )
